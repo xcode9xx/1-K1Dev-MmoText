@@ -1,5 +1,5 @@
 # code
-    TriggerEvent("1-K1Dev-MmoText:AddText",'Hello world! Hello world! Hello world! Hello world!') -- client event
+    TriggerEvent("1-K1Dev-MmoText:AddText","string") -- client event
      
 ```lua
 RegisterCommand('test', function()
