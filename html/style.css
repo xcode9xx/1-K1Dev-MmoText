@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+
+
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.517);
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  max-width: 80%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+  /* ตกแต่งเพิ่มเติมให้เข้ากับธีมเกม MMO */
+
+  .subtitle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #090909bb;
+  }
+
+  .subtitle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 5px 0;
+    border-color: transparent #090909bb transparent transparent;
+  }
+  
+  
+  .subtitle.animated {
+    animation: typing 1s linear;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+.subtitle.visible {
+    opacity: 1;
+  }
